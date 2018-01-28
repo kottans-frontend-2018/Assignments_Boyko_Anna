@@ -42,8 +42,9 @@ button:focus, select:focus {
   outline: 0;
 }
 
-button:hover, select:hover {
+button:hover, select:hover, input:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 /*Header*/
@@ -73,7 +74,6 @@ button:hover, select:hover {
   text-align: center;
   border: 1px solid #c9d0e1;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 /*Main section class Order */
@@ -164,7 +164,6 @@ button:hover, select:hover {
   text-transform: uppercase;
   text-align: center;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .summary-buttons button[name="submit"] {
@@ -279,6 +278,10 @@ h2::before {
   cursor: pointer;
 }
 
+.radio-wrapper:hover {
+  opacity: 0.5;
+}
+
 input[name="document"]:checked + .radio-wrapper {
   display: block;
   padding: 17px 0;
@@ -374,6 +377,13 @@ table.upload-files {
   font-weight: 700;
 }
 
+button[name="trash"] {
+  width: 16px;
+  color: #a5abc5;
+  background: transparent;
+  border: none;
+}
+
 /*Language*/
 
 .select-wrapper {
@@ -410,7 +420,6 @@ table.upload-files {
   margin-left: 30px;
   border: 1px solid #d7d9e0;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .select-container {
@@ -490,7 +499,6 @@ button::-moz-focus-inner, select::-moz-focus-inner, input[type=range]::-moz-focu
   padding: 26px 8px;
   border: 1px solid #d7d9e0;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 input[name="tone"]:checked + .radio-wrapper {
@@ -795,7 +803,6 @@ input[type="range"]:focus::-ms-fill-upper {
   padding: 25px 8px;
   border: 1px solid #d7d9e0;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 input[name="payment-method"]:checked + .radio-wrapper {

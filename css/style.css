@@ -282,6 +282,17 @@ h2::before {
   opacity: 0.5;
 }
 
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 input[name="document"]:checked + .radio-wrapper {
   display: block;
   padding: 17px 0;
@@ -378,10 +389,11 @@ table.upload-files {
 }
 
 button[name="trash"] {
-  width: 16px;
+  width: 30px;
+  border: 1px solid transparent;
   color: #a5abc5;
+  text-align: center;
   background: transparent;
-  border: none;
 }
 
 /*Language*/
@@ -440,7 +452,7 @@ button[name="trash"] {
   pointer-events: none;
 }
 
-/*Eelect compatibility*/
+/*Select compatibility*/
 
 select {
    -webkit-appearance: none;

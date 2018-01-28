@@ -46,35 +46,10 @@ button:hover, select:hover {
   opacity: 0.5;
 }
 
-/*Compatibility*/
-
-select {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-    appearance: none;
-}
-
-select::-ms-expand {
-    display: none;
-}
-
-select:hover, select:focus. select:active { 
-  outline: 0; 
-}
-
-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #9098b7;
-}
-
-button::-moz-focus-inner, select::-moz-focus-inner, input[type=range]::-moz-focus-outer { 
-  border: 0; 
-}
-
 /*Header*/
 
 .header {
-  width: 78%;
+  width: 90%;
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
@@ -105,7 +80,8 @@ button::-moz-focus-inner, select::-moz-focus-inner, input[type=range]::-moz-focu
 
 .order {
   background-color: #fff;
-  width: 78%; 
+  width: 100%;
+  max-width: 90%;
   margin: 40px auto;
   border: 2px solid #c9d0e1;
   border-radius: 5px;
@@ -326,11 +302,13 @@ input[name="document"]:checked + .radio-wrapper:after {
 /*Upload*/
 
 .order-form-container {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
-  margin: 30px 100px;
+  margin: 30px 10%;
+  margin-right: 0px;
 }
 
 .upload-wrapper {
@@ -453,19 +431,46 @@ table.upload-files {
   pointer-events: none;
 }
 
+/*Eelect compatibility*/
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:hover, select:focus. select:active { 
+  outline: 0; 
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #9098b7;
+}
+
+button::-moz-focus-inner, select::-moz-focus-inner, input[type=range]::-moz-focus-outer { 
+  border: 0; 
+}
+
 /*Tone*/
 
 .tone-timing-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
 }
 
 .tone-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 300px;
+  max-width: 300px;
   min-height: 300px;
 }
 
@@ -511,7 +516,7 @@ input[name="tone"]:checked + .radio-wrapper:after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 500px;
+  max-width: 500px;
   min-height: 300px;
 }
 
@@ -699,6 +704,7 @@ input[type="range"]:focus::-ms-fill-upper {
 .sign-up {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .sign-up-wrapper a, .submit-wrapper a {
@@ -726,7 +732,7 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .sign-up-input {
   position: relative;
-  width: 35%;
+  width: 400px;
 }
 
 .sign-up input:invalid + label:before {
@@ -769,6 +775,7 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .payment-method {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .payment-method .radio-wrapper {
@@ -806,16 +813,6 @@ input[name="payment-method"]:checked + .radio-wrapper:after {
   z-index: 2;
   background-color: #76a7e1;
   border-radius: 50px;
-
-/*    font-family: "Font Awesome 5 Free";
-  content: "\f058";
-  position: absolute;
-  top: -12px;
-  left: 265px;
-  background-color: #76a7e1;
-  color: #fff;
-  font-size: 30px;
-  border-radius: 50px;*/
 }
 
 .payment-method img {
@@ -827,36 +824,40 @@ input[name="payment-method"]:checked + .radio-wrapper:after {
 
 .payment-details {
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width:100%;
 }
 
-.payment-details input[name="user-card-number"] {
-  width: 500px;
+.payment-details input {
+  width: 100%;
   height: 20px;
 }
 
-.payment-details-input {
-  margin-right: 30px;
+.payment-details-card {
+  width: 400px;
+  margin-right: 50px;
   position: relative;
 }
 
-.card label:before {
+.payment-details-date {
+  width: 250px;
+  margin-right: 50px;
+  position: relative;
+}
+.payment-details-code {
+  width: 100px;
+  margin-right: 50px;
+  position: relative;
+}
+
+.payment-details-card label:before {
   font-family: "Font Awesome 5 Free";
   content: "\f09d";
   position: absolute;
   font-size: 35px;
-  top: 40px;
-  right: 10px;
-}
-
-
-.payment-details input[name="user-card-date"] {
-  width: 200px;
-  height: 20px;
-}
-
-.payment-details input[name="user-card-code"] {
-  width: 100px;
-  height: 20px;
+  top: 50%;
+  left: 95%;
 }
 
 .payment-details input{
@@ -873,6 +874,7 @@ input[name="payment-method"]:checked + .radio-wrapper:after {
 .submit-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-end;
 }
 
@@ -911,7 +913,7 @@ input[name="payment-method"]:checked + .radio-wrapper:after {
 }
 
 footer {
-  padding: 5% 11%;
+  padding: 5%;
 }
 
 .footer-container {

@@ -78,7 +78,7 @@ button:hover, select:hover, input:hover {
 
 /*Main section class Order */
 
-.order {
+main {
   background-color: #fff;
   width: 100%;
   max-width: 90%;
@@ -541,25 +541,25 @@ input[name="tone"]:checked + .radio-wrapper:after {
   min-height: 300px;
 }
 
-.timing-legend {
+.timing-wrapper legend {
   border: 1px solid #d7d9e0;
   padding: 30px;
   border-radius: 5px;
 }
 
-.timing-legend h3 {
+.timing-wrapper legend h3 {
   width: 100%;
   font-weight: 700;
   padding-bottom: 20px;
 }
 
-.timing-legend p {
+.timing-wrapper legend p {
   text-align: justify;
   padding: 0 40px;
   line-height: 20px;
 }
 
-.timing-legend span {
+.timing-wrapper legend span {
   color: #edbe7c;
 }
 

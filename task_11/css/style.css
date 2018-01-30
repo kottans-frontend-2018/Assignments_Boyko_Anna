@@ -984,6 +984,10 @@ footer {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .footer-item a i {
   width: 30px;
 }

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-store">
+	<title>Order form</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Begin header section with nav and sign in -->
+	<header class="header">
+		<button class="header-button"><i class="fas fa-long-arrow-alt-left"></i>Go back</button>
+		<img src="images/logo.png" class="logo" alt="logo">
+		<button class="header-button"><i class="fas fa-user"></i>Sign in</button>
+	</header>
+	<!-- End header section with nav and sign in -->
+	<!-- Begin main section -->
+	<main>
+		<!-- Begin order summary section -->
+		<section class="order-summary">
+			<div class="order-summary-container">
+				<div class="summary-info">
+					<h3><i class="fas fa-clipboard"></i>Your order</h3>
+					<table class="summary-table">
+						<thead>
+							<tr>
+								<th>Items</th>
+								<th>Details</th>
+								<th>Price</th>
+								<th>Delivery</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2 documents</td>
+								<td>2 languages</td>
+								<td>696.06</td>
+								<td>48 hours</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+				<div class="summary-buttons">
+					<button form="main-order-form" type="submit" name="submit">Place order</button>
+					<button form="main-order-form" type="button" name="quote">Print a quote</button>
+				</div>
+			</div>
+			<div class="summary-help">
+				<h3><i class="far fa-life-ring"></i>Help center</h3>
+				<address>
+					<p>If you need assistance while placing your order, contact with our beloved Project Manager by phone or email <a href="tel:+9710555555">+971 (0) 555 555</a><a href="mailto:help@qtest.com">help@qtest.com</a></p>
+				</address>
+			</div>
+		</section>
+		<!-- End order summary section -->
+		<!-- Begin main order form section -->
+		<section class="order-form">
+			<form id="main-order-form" class="form" method="post" enctype="multipart/form-data">
+				<!-- Begin type of document subsection -->
+				<fieldset class="document-container">
+					<h1 class="h1">Select what you want to translate</h1>
+					<div class="doc-wrapper">
+			    		<label>
+			    			<input required class="visually-hidden" type="radio" name="document" value="website">
+			    			<span class="radio-wrapper">
+			    				<img src="images/website.png" alt="image for button website"><br>
+			    				Website
+			    			</span>
+			    			<div class="checked-mark"></div>
+			    		</label>
+			    		<label>
+			    			<input required checked class="visually-hidden" type="radio" name="document" value="documents">
+			    			<span class="radio-wrapper">
+			    				<img src="images/documents.png" alt="image for button documents"><br>
+			    				Documents
+			    			</span>
+			    			<div class="checked-mark"></div>
+			    		</label>
+			    		<label>
+			    			<input required class="visually-hidden" type="radio" name="document" value="social">
+			    			<span class="radio-wrapper">
+			    				<img src="images/social_account.png" alt="image for button social accounts"><br>
+			    				Social Accounts
+			    			</span>
+			    			<div class="checked-mark"></div>
+			    		</label>
+					</div>
+				</fieldset>
+				<!-- End type of document subsection -->
+				<!-- Begin upload documents subsection -->
+				<fieldset class="order-form-container">
+					<div class="upload-wrapper">
+						<h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
+						<label>
+				    		<span class="upload-button">
+				    			<i class="fas fa-cloud-upload-alt"></i>Upload a new file
+				    		</span>
+				    		<input required class="visually-hidden" type="file" name="file" >
+				    	</label>
+						<table class="upload-files">
+							<thead>
+								<tr>
+									<th colspan="2">File name</th>
+									<th>File size</th>
+									<th>Number of words</th>
+									<th>Remove</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><i class="fas fa-file-alt"></i></td>
+									<td>business_operations.docx</td>
+									<td>78kb</td>
+									<td>842</td>
+									<td><button type="button" name="trash"><i class="fas fa-trash"></i></button></td>
+								</tr>
+								<tr>
+									<td><i class="fas fa-file-alt"></i></td>
+									<td>business_financial.docx</td>
+									<td>26kb</td>
+									<td>2326</td>
+									<td><button type="button" name="trash"><i class="fas fa-trash"></i></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</fieldset>
+				<!-- End upload documents subsection -->
+				<!-- Begin language subsection -->
+				<fieldset class="order-form-container">
+					<div class="select-wrapper">
+						<h2>Choose your languages pairings</h2>
+						<div class="select-from">
+							<p>From</p>
+							<div class="select-container">
+								<select class="select-button" name="from">
+									<option value="english" selected>English</option> 
+									<option value="ukrainian" >Ukrainian</option>
+									<option value="russian">Russian</option>
+									<option value="german">German</option>
+									<option value="italian">Italian</option>
+									<option value="spanish">Spanish</option>
+								</select>
+							</div>
+						</div>
+						<div class="select-to">
+							<p>To</p>
+							<div class="select-container">
+								<select class="select-button" name="to">
+									<option value="english">English</option> 
+									<option value="ukrainian" selected>Ukrainian</option>
+									<option value="russian">Russian</option>
+									<option value="german">German</option>
+									<option value="italian">Italian</option>
+									<option value="spanish">Spanish</option>
+								</select>
+							</div>
+							<div class="select-container">
+								<select class="select-button" name="to">
+									<option value="english">English</option> 
+									<option value="ukrainian" >Ukrainian</option>
+									<option value="russian" selected>Russian</option>
+									<option value="german">German</option>
+									<option value="italian">Italian</option>
+									<option value="spanish">Spanish</option>
+								</select>
+							</div>
+							<p><button type="button" name="trash"><i class="fas fa-trash"></i></button></p>
+							<button type="button" name="add" class="select-button">+ Add</button>
+						</div>
+					</div>
+				</fieldset>
+				<!-- End language subsection -->
+				<!-- Begin tone subsection -->
+				<div class="tone-timing-wrapper">
+					<fieldset class="order-form-container">
+						<div class="tone-wrapper">
+							<h2>Select your desired tone</h2>
+				    		<label>
+				    			<input required class="visually-hidden"  type="radio" name="tone" value="casual">
+				    			<span class="radio-wrapper tone-button">
+				    				<i class="fas fa-comments"></i>Friendly / Casual
+				    			</span>
+				    			<div class="checked-mark"></div>
+				    		</label>
+				    		<label>
+				    			<input required checked class="visually-hidden"  type="radio" name="tone" value="corporate">
+				    			<span class="radio-wrapper tone-button">
+				    				<i class="fas fa-briefcase"></i>Corporate / Pro
+				    			</span>
+				    			<div class="checked-mark"></div>
+				    		</label>
+				    		<label>
+				    			<input required class="visually-hidden"  type="radio" name="tone" value="formal">
+				    			<span class="radio-wrapper tone-button">
+				    				<i class="fas fa-bullhorn"></i>Media / Formal
+				    			</span>
+				    			<div class="checked-mark"></div>
+				    		</label>
+						</div>
+					</fieldset>
+				<!-- End tone subsection -->
+				<!-- Begin timing subsection -->
+					<fieldset class="order-form-container">
+						<div class="timing-wrapper">
+							<h2>Tell us how urgent this job is</h2>
+							<div class="range-wrapper">
+								<input type="range" min="-1" max="1" class="range">
+							</div>
+							<div class="range_choice">
+								<p>I got time</p>
+								<p>Averege</p>
+								<p>Yesterday</p>
+							</div>
+							<legend>
+								<h3><i class="fas fa-info-circle"></i>Timeline info</h3>
+								<p>With an <span>AVAREGE</span> timeline set up, our expert translator can tage a reasonable amount of time perfecting your translation</p>
+							</legend>
+						</div>
+						
+					</fieldset>
+				</div>
+				<!-- End timing subsection -->
+				<!-- Begin payment subsection -->
+				<fieldset class="order-form-container"> 
+					<div class="sign-up-wrapper">
+						<h2>Sign up and choose a payment method</h2>
+						<p>Already have an account with us? <a href="">Sign in.</a></p>
+						<div class="sign-up">
+							<div class="sign-up-input">
+								<p>Full name</p>
+								<input required type="text" id="user-name" name="user-name" class="input__signup" minlength="4" pattern='^[A-Za-z\s.-]+$' value="Mathieu Mayer">
+								<label for="user-name"></label>
+							</div>
+						</div>
+						<div class="sign-up">
+							<div class="sign-up-input">
+								<p>Email adress</p>
+								<input required type="email" id="user-email" name="user-email" class="input__signup" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="mathieu.mm@me.com">
+								<label for="user-email"></label>
+							</div>
+							<div class="sign-up-input">
+								<p>Choose a password</p>
+								<input required type="password" id="user-password" name="user-password" class="input__signup" minlength="6" maxlength="20">
+								<label for="user-password"></label>
+							</div>
+						</div>
+						<div class="payment-method">
+							<label>
+				    			<input required checked class="visually-hidden"  type="radio" name="payment-method" value="visa">
+				    			<span class="radio-wrapper payment-button">
+			    					<img src="images/card.png" alt="image for button card visa/mastercard">
+			    				</span>
+			    				<div class="checked-mark"></div>
+			    			</label>
+			    			<label>
+				    			<input required class="visually-hidden"  type="radio" name="payment-method" value="paypal">
+				    			<span class="radio-wrapper payment-button">
+			    					<img src="images/pay_pal.png" alt="image for button paypal">
+			    				</span>
+			    				<div class="checked-mark"></div>
+			    			</label>
+			    			<label>
+				    			<input required class="visually-hidden"  type="radio" name="payment-method" value="amazon">
+				    			<span class="radio-wrapper payment-button">
+			    					<img src="images/amazon.png" alt="image for button amazon">
+			    				</span>
+			    				<div class="checked-mark"></div>
+			    			</label>
+						</div>
+						<div class="payment-details">
+							<div class="payment-details-card">
+								<p>Card number</p>
+								<input required type="text" autocomplete="cc-number" id="user-card-number" name="user-card-number" pattern="[0-9]{16,16}" minlength="16" maxlength="16">
+								<label for="user-card-number"></label>
+							</div>
+							<div class="payment-details-date">
+								<p>Expiry date</p>
+								<input required type="month" autocomplete="cc-exp" id="user-card-date" name="user-card-date" pattern="[0-9]{2}/[0-9]{2}" placeholder="MM/YY">
+								<label for="user-card-date"></label>
+							</div>
+							<div class="payment-details-code">
+								<p>Code</p>
+								<input required type="text" autocomplete="cc-csc" id="user-card-code" name="user-card-code" pattern="[0-9]{3,3}" minlength="3" maxlength="3">
+								<label for="user-card-code"></label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<!-- End payment subsection -->
+				<!-- Begin submit subsection -->
+				<fieldset class="order-form-container">
+					<div class="submit-wrapper">
+						<div class="submit-terms">
+						<input required type="checkbox" name="terms" value="agree" id="terms">
+						<label for="terms">
+							<p>I agree to the <a href="">Terms &amp; Conditions</a></p>
+						</label>
+						</div>
+						<div class="summary-buttons">
+							<button type="submit" name="submit">Place order</button>
+							<button type="button" name="quote">Print a quote</button>
+						</div>
+					</div>
+					
+				</fieldset>
+				<!-- End submit subsection -->
+			</form>
+		</section>
+		<!-- End main order form section -->
+	</main>
+	<!-- End main section -->
+	<!-- Begin footer -->
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer-item">
+				<div>
+					<i class="far fa-heart"></i>
+				</div>
+				<div>
+					<h3>What we do</h3>
+					<p>We provide a full range of language services including content development, document, website and social media accounts translation</p>
+				</div>
+			</div>
+			<div class="footer-item">
+				<div>
+					<i class="far fa-compass"></i>
+				</div>
+				<div>
+					<h3>Our main office</h3>
+				<address>
+					Dubai, UAE<br>
+					P.O. Box: 502735<br>
+					<a href="tel:+971044278128">Phone: +971(0)44278128</a>
+				</address>
+				</div>
+			</div>
+			<div class="footer-item">
+				<div>
+					<i class="fas fa-share-alt"></i>
+				</div>
+				<div>
+					<h3>Connect with us</h3>
+				<address>
+					<a href=""><i class="fab fa-facebook-f"></i>Facebook</a><br>
+					<a href=""><i class="fab fa-twitter"></i>Twitter</a><br>
+					<a href=""><i class="fab fa-linkedin-in"></i>Linkedin</a>			
+				</address>
+				</div>
+			</div>
+			<div class="footer-item">
+				<img src="images/logo_footer.png" class="logo" alt="logo">
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+</body>
+</html>

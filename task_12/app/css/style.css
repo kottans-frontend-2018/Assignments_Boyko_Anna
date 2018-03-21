@@ -74,7 +74,7 @@ main {
 	margin-top: 145px;
 }
 
-.queue {
+.queue_wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -96,10 +96,15 @@ main {
 	max-width: 280px;
 }
 
-.pizza__queue_wrapper, .pizza__time_wrapper {
+.pizza-name {
+	text-align: center;
+	margin: 5px 0;
+}
+
+.pizza__time_wrapper, .pizza__details_wrapper {
 	display: flex;
 	justify-content: space-between;
-	margin: 30px 20px;
+	margin: 15px 20px;
 }
 
 main .button-add {
@@ -116,12 +121,14 @@ footer {
 	min-height: 80px;
 }
 
-footer a {
+.footer__address a {
+	display: block;
+	margin-top: 5px;
 	color: #fff;
 	text-decoration: none;
 }
 
-footer a:hover {
+.footer__address a:hover {
 	text-decoration: underline;
 }
 

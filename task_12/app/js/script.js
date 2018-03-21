@@ -1,4 +1,4 @@
-window.onload = startTime();
+window.onload = setInterval(startTime, 500);
 
 function startTime() {
     var today = new Date();
@@ -9,7 +9,6 @@ function startTime() {
     s = checkTime(s);
     document.getElementById('current-time').innerHTML =
     h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};
